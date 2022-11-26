@@ -24,10 +24,16 @@ export default function Clock() {
     }, 1000);
   }, []);
   return (
-    <View>
-      <Text> {localTime?.toLocaleTimeString()}</Text>
-    </View>
+    <Text style={styles.clock_time}> {localTime?.toLocaleTimeString()}</Text>
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  clock_time: {
+    color: 'black',
+    fontSize: 18,
+    textAlign: 'left',
+    paddingLeft: 20,
+    marginTop: '10%',
+  },
+});
