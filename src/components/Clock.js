@@ -1,9 +1,7 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
 
-export default function Clock() {
-  const [localTime, setlocalTime] = useState(null);
-
+export default function Clock({localTime, setlocalTime}) {
   const handleClock = () => {
     let startDate = new Date().setHours(5);
     startDate = new Date(startDate).setMinutes(0);

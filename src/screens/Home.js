@@ -1,12 +1,16 @@
 import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import Clock from '../components/Clock';
+import TrainList from '../components/TrainList';
 
 export default function Home() {
+  const [localTime, setlocalTime] = useState(null);
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Next Train Indicator</Text>
-      <Clock />
+      <Clock localTime={localTime} setlocalTime={setlocalTime} />
+      <TrainList localTime={localTime} />
     </View>
   );
 }
